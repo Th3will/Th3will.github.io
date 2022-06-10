@@ -1,0 +1,77 @@
+/* #constants 
+There's supposed to be a more complicated explanation, but I don't understand it so I'll just paste it here
+The :root selector represents the <html> element in the HTML page. For this kind of task, a best practice is 
+to define a set of global CSS variables in a CSS rule with the :root selector. In this example, you've defined 
+three color variables. You'll next be able to use these variables in other CSS rules.
+*/
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #303030;
+    --light-grey: #c3c3c3;
+}
+
+.light-theme{
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--light-grey);
+    --btnColor: var(--black);
+}
+
+.dark-theme{
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnBg: var(--grey);
+    --btnColor: var(--white);
+}
+
+.navbar{
+    position: sticky;
+    box-sizing: border-box;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: #7e1070;
+    overflow: hidden;
+    border-bottom: 15px solid #7e7a7a;
+}
+
+.btn{
+    position: absolute;
+    top: 0px;
+    float: left;
+    padding: 4px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+
+.list{
+    list-style: square;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--fontColor);
+    font-family: monospace;
+}
+
+/*editing default classes*/
+/*
+ul{
+    font-family: helvetica;
+}
+*/
+
+li{
+    list-style: circle;
+}
+
+
+/* how to make an id*/
+/* 
+#msg{
+    font-family: monospace;
+} */
